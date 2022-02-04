@@ -47,7 +47,7 @@ var Diagnostic_Location = (function(){
             backgroundStatus = statuses[Diagnostic.permission.ACCESS_BACKGROUND_LOCATION],
             status;
 
-        if(coarseStatus === Diagnostic.permissionStatus.DENIED_ALWAYS || fineStatus === Diagnostic.permissionStatus.DENIED_ALWAYS){
+        if(coarseStatus === Diagnostic.permissionStatus.DENIED_ALWAYS && fineStatus === Diagnostic.permissionStatus.DENIED_ALWAYS){
             status = Diagnostic.permissionStatus.DENIED_ALWAYS;
         }else if(coarseStatus === Diagnostic.permissionStatus.DENIED_ONCE || fineStatus === Diagnostic.permissionStatus.DENIED_ONCE){
             status = Diagnostic.permissionStatus.DENIED_ONCE;
